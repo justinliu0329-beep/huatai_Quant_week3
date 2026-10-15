@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+# A股多因子短线策略研究 —— 依赖（Week1~Week3）
+akshare>=1.18.0          # 行情/财务数据源
+pandas>=2.0
+numpy>=1.26
+scipy>=1.11              # 支撑 pandas 的 Spearman 相关(IC 计算)
+matplotlib>=3.7
+seaborn>=0.13            # 相关矩阵 / 月度热力图
+pyarrow>=15.0            # parquet 读写
+tabulate>=0.9            # 报告 markdown 表格
+# Week2 回测框架
+vectorbt>=1.1.0          # 撮合 / 持仓管理 / 净值计算
+plotly<6                 # vectorbt 1.1 与 plotly>=6 不兼容（scattermapbox 变更），必须锁定
+# Week3 波动率建模
+arch>=6.0                # GARCH(1,1) 波动率预测
+# 测试
+pytest>=7
+# 可选：QMT 实盘/仿真（需从券商 QMT 客户端目录安装，本地仿真不需要）
+# xtquant
